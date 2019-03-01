@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/niveles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="287dp"
@@ -47,7 +47,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/letras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="288dp"
@@ -59,7 +59,7 @@
         app:srcCompat="@mipmap/boton2" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/acercade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
