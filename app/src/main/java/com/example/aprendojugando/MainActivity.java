@@ -37,12 +37,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Parte que le da sonido al botón
         sp.play (sonido_de_reproduccion, 1, 1, 1, 0, 0);
+        
 
     }
     public void Letras (View view){
 
         //Parte que le da sonido al botón
         sp.play (sonido_de_reproduccion, 1, 1, 1, 0, 0);
+
+
 
     }
     public void Acercade (View view){
