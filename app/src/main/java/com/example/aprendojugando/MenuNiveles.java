@@ -1,5 +1,6 @@
 package com.example.aprendojugando;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
@@ -75,6 +76,11 @@ public class MenuNiveles extends AppCompatActivity {
 
         //Parte que le da sonido al botón
         sp.play (sonido_de_reproduccion, 1, 1, 1, 0, 0);
+
+        //linkea al menu principal
+
+        Intent siguiente = new Intent(this, MainActivity.class);
+        startActivity(siguiente);
 
     }
 }
