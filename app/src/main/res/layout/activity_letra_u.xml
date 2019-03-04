@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
+    tools:context=".LetraU">
+
+    <ImageView
+        android:id="@+id/iv1_letrau"
+        android:layout_width="162dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/arbol" />
+
+    <ImageView
+        android:id="@+id/iv2_letrau"
+        android:layout_width="162dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintStart_toEndOf="@+id/iv1_letrau"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/espada" />
+
+    <ImageView
+        android:id="@+id/iv3_letrau"
+        android:layout_width="162dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintStart_toEndOf="@+id/iv2_letrau"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/uno" />
+
+    <ImageView
+        android:id="@+id/iv4_letrau"
+        android:layout_width="162dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintStart_toEndOf="@+id/iv3_letrau"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/oso" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/check"
+        app:srcCompat="@mipmap/casa" />
+
+    <ImageButton
+        android:id="@+id/check"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginBottom="94dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/check" />
+
+</android.support.constraint.ConstraintLayout>
