@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,33 +16,38 @@ public class MainActivity extends AppCompatActivity {
     SoundPool sp;
     int sonido_de_reproduccion;
 
+    private ImageButton btn_lvl1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn_lvl1= findViewById(R.id.niveles);
 
 
         //se encarga de cargar el sonido del botón para después reproduciorlo
         sp= new SoundPool(1, AudioManager.STREAM_MUSIC, 1);
         sonido_de_reproduccion= sp.load(this, R.raw.selec, 1);
 
-        //Poner el ícono al lado de action bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+        btn_lvl1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, MenuNiveles.class);
+                startActivity(intent);
+
+                //Parte que le da sonido al botón
+                //sp.play (sonido_de_reproduccion, 1, 1, 1, 0, 0);
+
+
+            }
+        });
 
     }
 
-    public void Niveles (View view){
-
-        //Parte que le da sonido al botón
-        sp.play (sonido_de_reproduccion, 1, 1, 1, 0, 0);
-
-        //linkea al menu niveles
-
-        Intent siguiente = new Intent(this, MenuNiveles.class);
-        startActivity(siguiente);
-
-    }
     public void Letras (View view){
 
         //Parte que le da sonido al botón

@@ -69,4 +69,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/check" />
 
+    <TextView
+        android:id="@+id/txt_mensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="452dp"
+        android:layout_marginLeft="452dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
