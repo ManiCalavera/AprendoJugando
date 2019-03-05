@@ -15,6 +15,7 @@ public class MenuNiveles extends AppCompatActivity {
     SoundPool sp;
     int sonido_de_reproduccion;
     private ImageButton btn_lvl1;
+    private ImageButton btn_lvl6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MenuNiveles extends AppCompatActivity {
         setContentView(R.layout.activity_menu_niveles);
 
         btn_lvl1= findViewById(R.id.menu_lvl1);
+        btn_lvl6=findViewById(R.id.btn_lvl6);
 
         //se encarga de cargar el sonido del botón para después reproduciorlo
         sp= new SoundPool(1,AudioManager.STREAM_MUSIC, 1);
@@ -33,6 +35,21 @@ public class MenuNiveles extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MenuNiveles.this, LetraU.class);
+                startActivity(intent);
+
+                //Parte que le da sonido al botón
+                sp.play (sonido_de_reproduccion, 1, 1, 1, 0, 0);
+
+
+            }
+        });
+
+        btn_lvl6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MenuNiveles.this, ActivityTrencito.class);
                 startActivity(intent);
 
                 //Parte que le da sonido al botón
