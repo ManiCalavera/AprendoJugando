@@ -145,35 +145,41 @@
                         android:layout_gravity="bottom"
                         android:orientation="horizontal"
                         android:weightSum="100">
+
                         <ImageView
+                            android:id="@+id/trensito"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
                             android:src="@drawable/troquelado" />
+
                         <ImageView
-                            android:id="@+id/imageViewLetraO1"
+                            android:id="@+id/destino1"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
-                            android:src="@drawable/troquelado"/>
+                            android:src="@drawable/troquelado" />
+
                         <ImageView
-                            android:id="@+id/imageViewLetraO2"
+                            android:id="@+id/destino2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
-                            android:src="@drawable/troquelado"/>
+                            android:src="@drawable/troquelado" />
+
                         <ImageView
-                            android:id="@+id/imageViewLetraO3"
+                            android:id="@+id/destino3"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
-                            android:src="@drawable/troquelado"/>
+                            android:src="@drawable/troquelado" />
+
                         <ImageView
-                            android:id="@+id/imageViewLetraO4"
+                            android:id="@+id/destino4"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
-                            android:src="@drawable/troquelado"/>
+                            android:src="@drawable/troquelado" />
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -208,30 +214,34 @@
                         android:layout_gravity="bottom"
                         android:orientation="horizontal"
                         android:weightSum="100">
+
                         <ImageView
-                            android:id="@+id/imageViewLetraA1"
+                            android:id="@+id/destino5"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
                             android:src="@drawable/troquelado" />
+
                         <ImageView
-                            android:id="@+id/imageViewLetraA2"
+                            android:id="@+id/destino6"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
-                            android:src="@drawable/troquelado"/>
+                            android:src="@drawable/troquelado" />
+
                         <ImageView
-                            android:id="@+id/imageViewLetraA3"
+                            android:id="@+id/destino7"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
-                            android:src="@drawable/troquelado"/>
+                            android:src="@drawable/troquelado" />
+
                         <ImageView
-                            android:id="@+id/imageViewLetraA4"
+                            android:id="@+id/destino8"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_weight="20"
-                            android:src="@drawable/troquelado"/>
+                            android:src="@drawable/troquelado" />
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
