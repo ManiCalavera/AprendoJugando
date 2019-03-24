@@ -24,7 +24,6 @@ public class LetraU extends AppCompatActivity {
     private ImageView imageView4_oso1;
     private ImageButton btn_check;
     final Boolean[] arreglo = {false, false, false, false};
-    TextView tv1;
 
 
 
@@ -52,12 +51,13 @@ public class LetraU extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageView1_arbol1.setImageResource(R.drawable.arbolseleccionado);
+                imageView2_espada1.setImageResource(R.drawable.espada);
+                imageView3_uno1.setImageResource(R.drawable.uno);
+                imageView4_oso1.setImageResource(R.drawable.oso);
                 arreglo[0] = true;
-                imageView2_espada1.dispatchConfigurationChanged(Image);
                 arreglo[1] = false;
                 arreglo[2] = false;
                 arreglo[3] = false;
-
             }
 
         });
@@ -67,7 +67,10 @@ public class LetraU extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                imageView1_arbol1.setImageResource(R.drawable.arbol);
                 imageView2_espada1.setImageResource(R.drawable.espadaseleccionado);
+                imageView3_uno1.setImageResource(R.drawable.uno);
+                imageView4_oso1.setImageResource(R.drawable.oso);
                 arreglo[0] = false;
                 arreglo[1] = true;
                 arreglo[2] = false;
@@ -80,7 +83,10 @@ public class LetraU extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                imageView1_arbol1.setImageResource(R.drawable.arbol);
+                imageView2_espada1.setImageResource(R.drawable.espada);
                 imageView3_uno1.setImageResource(R.drawable.unoseleccionado);
+                imageView4_oso1.setImageResource(R.drawable.oso);
                 arreglo[0] = false;
                 arreglo[1] = false;
                 arreglo[2] = true;
@@ -92,6 +98,9 @@ public class LetraU extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                imageView1_arbol1.setImageResource(R.drawable.arbol);
+                imageView2_espada1.setImageResource(R.drawable.espada);
+                imageView3_uno1.setImageResource(R.drawable.uno);
                 imageView4_oso1.setImageResource(R.drawable.ososeleccionado);
                 arreglo[0] = false;
                 arreglo[1] = false;
@@ -107,7 +116,6 @@ public class LetraU extends AppCompatActivity {
             public void onClick(View v) {
                 if ((arreglo[0] == false) && (arreglo[1] == false) && (arreglo[2] == true) && (arreglo[3] == false)) {
                     Toast.makeText(LetraU.this, "Lo hiciste muy bien!!", Toast.LENGTH_LONG).show();
-                    tv1.setText("Congratulations!");
                 }
                 else {
                     Toast.makeText(LetraU.this, "Ups! te equivocaste, inténtalo de nuevo", Toast.LENGTH_LONG).show();
