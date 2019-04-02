@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
+    tools:context=".Activities.ActivityContainer"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView1_arbol1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2_espada1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arbol" />
+
+    <ImageView
+        android:id="@+id/imageView2_espada1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewv3_uno1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView1_arbol1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/espada" />
+
+    <ImageView
+        android:id="@+id/imageViewv3_uno1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4_oso1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView2_espada1"
+        app:srcCompat="@drawable/uno" />
+
+    <ImageView
+        android:id="@+id/imageView4_oso1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewv3_uno1"
+        app:srcCompat="@drawable/oso" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_marginRight="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/check"
+        app:layout_constraintHeight_max="90dp"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.536"
+        app:layout_constraintWidth_max="100dp"
+        app:srcCompat="@drawable/casa" />
+
+    <ImageButton
+        android:id="@+id/check"
+        android:scaleType="fitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_max="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.535"
+        app:srcCompat="@drawable/check" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+</android.support.constraint.ConstraintLayout>Layout>
