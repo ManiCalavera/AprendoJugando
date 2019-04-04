@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline4"
         app:layout_constraintVertical_bias="0.536"
         app:layout_constraintWidth_max="100dp"
-        app:srcCompat="@drawable/casa" />
+        app:srcCompat="@mipmap/casa" />
 
     <ImageButton
         android:id="@+id/check"
@@ -93,7 +93,7 @@
         app:layout_constraintStart_toEndOf="@id/home"
         app:layout_constraintTop_toBottomOf="@+id/guideline4"
         app:layout_constraintVertical_bias="0.535"
-        app:srcCompat="@drawable/check" />
+        app:srcCompat="@mipmap/check" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline4"
@@ -102,4 +102,4 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
-</android.support.constraint.ConstraintLayout>Layout>
+</android.support.constraint.ConstraintLayout>

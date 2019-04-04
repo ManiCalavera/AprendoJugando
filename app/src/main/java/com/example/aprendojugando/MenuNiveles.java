@@ -31,7 +31,10 @@ public class MenuNiveles extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MenuNiveles.this, LetraU.class);
+                Intent intent = new Intent(MenuNiveles.this, ActivityContainer.class);
+                Bundle bundle = new Bundle ();
+                bundle.putInt("modoNiveles", 1);
+                intent.putExtras(bundle);
                 startActivity(intent);
 
                 //Parte que le da sonido al botón
@@ -46,7 +49,10 @@ public class MenuNiveles extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MenuNiveles.this, ActivityTrencito.class);
+                Intent intent = new Intent(MenuNiveles.this, ActivityContainer.class);
+                Bundle bundle = new Bundle ();
+                bundle.putInt("modoNiveles", 6);
+                intent.putExtras(bundle);
                 startActivity(intent);
 
                 //Parte que le da sonido al botón
