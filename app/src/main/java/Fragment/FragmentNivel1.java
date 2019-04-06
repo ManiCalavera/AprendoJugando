@@ -1,16 +1,21 @@
 package Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+
 
 import com.example.aprendojugando.R;
 
@@ -24,6 +29,7 @@ public class FragmentNivel1 extends Fragment {
     final Boolean[] arreglo = {false, false, false, false};
 
 
+
     public FragmentNivel1() {
         // Required empty public constructor
     }
@@ -33,6 +39,7 @@ public class FragmentNivel1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View fragment1 =  inflater.inflate( R.layout.fragment_nivel1, container, false );
+
 
 
         btn_check= fragment1.findViewById(R.id.check);
@@ -115,8 +122,9 @@ public class FragmentNivel1 extends Fragment {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+
                 if ((!arreglo[0]) && (!arreglo[1]) && (arreglo[2]) && (!arreglo[3])) {
-                    Toast.makeText(getContext(), "Lo hiciste muy bien!!", Toast.LENGTH_LONG).show();
+                    new Gano().show(getFragmentManager(), "Ganó!");
                 }
                 else {
                     Toast.makeText(getContext(), "Ups! te equivocaste, inténtalo de nuevo", Toast.LENGTH_LONG).show();
@@ -126,9 +134,9 @@ public class FragmentNivel1 extends Fragment {
         });
 
 
+
         return fragment1;
     }
-
 
 
 

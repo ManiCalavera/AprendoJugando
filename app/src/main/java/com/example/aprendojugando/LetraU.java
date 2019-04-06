@@ -115,7 +115,7 @@ public class LetraU extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if ((arreglo[0] == false) && (arreglo[1] == false) && (arreglo[2] == true) && (arreglo[3] == false)) {
-                    Toast.makeText(LetraU.this, "Lo hiciste muy bien!!", Toast.LENGTH_LONG).show();
+                    openDialog ();
                 }
                 else {
                     Toast.makeText(LetraU.this, "Ups! te equivocaste, inténtalo de nuevo", Toast.LENGTH_LONG).show();
@@ -123,6 +123,12 @@ public class LetraU extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    public void openDialog (){
+
+
     }
 
 

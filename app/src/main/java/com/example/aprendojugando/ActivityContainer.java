@@ -10,9 +10,7 @@ import Fragment.FragmentNivel1;
 
 public class ActivityContainer extends AppCompatActivity {
 
-    //public static String modoAcercaDe;
 
-    private Fragment fragment;
 
     private FragmentManager fragmentManager;
 
