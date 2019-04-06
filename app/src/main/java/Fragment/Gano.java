@@ -19,8 +19,8 @@ public class Gano extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.fragment_gano, null);
 
         builder.setView(view)
-                .setTitle("Ganaste!!!")
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setTitle("Ganaste!!!");
+               /* .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -32,7 +32,7 @@ public class Gano extends AppCompatDialogFragment {
 
                     }
                 });
-
+                */
         return builder.create();
 
     }
