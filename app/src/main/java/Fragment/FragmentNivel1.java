@@ -36,7 +36,7 @@ public class FragmentNivel1 extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View fragment1 =  inflater.inflate( R.layout.fragment_nivel1, container, false );
 
