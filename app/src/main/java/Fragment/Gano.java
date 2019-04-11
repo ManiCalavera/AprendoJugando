@@ -1,6 +1,7 @@
 package Fragment;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.aprendojugando.ActivityContainer;
 import com.example.aprendojugando.R;
 
 
@@ -18,9 +20,11 @@ import com.example.aprendojugando.R;
 public class Gano extends AppCompatDialogFragment {
 
     private FragmentGanoListener listener;
+
     public interface FragmentGanoListener {
         void onInputGanoSent(Boolean input);
     }
+
     Button btn_si;
     Button btn_no;
 
@@ -30,8 +34,11 @@ public class Gano extends AppCompatDialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.fragment_gano, null);
 
-        btn_si= view.findViewById(R.id.button_si);
-        btn_no= view.findViewById(R.id.button_no);
+        btn_si = view.findViewById(R.id.button_si);
+        btn_no = view.findViewById(R.id.button_no);
+
+
+        loadbuttons();
 
         builder.setView(view);
 
@@ -52,8 +59,8 @@ public class Gano extends AppCompatDialogFragment {
 
     }
 
-    private void loadbuttons (){
-        btn_si.setOnClickListener(new View.OnClickListener(){
+    private void loadbuttons() {
+        btn_si.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -62,7 +69,7 @@ public class Gano extends AppCompatDialogFragment {
             }
         });
 
-        btn_no.setOnClickListener(new View.OnClickListener(){
+        btn_no.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -70,5 +77,22 @@ public class Gano extends AppCompatDialogFragment {
                 dismiss();
             }
         });
+    }
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof FragmentGanoListener) {
+            listener = (FragmentGanoListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement FragmentAListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listener = null;
+    }
 }
-}
+

@@ -1,6 +1,5 @@
 package com.example.aprendojugando;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,8 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import Fragment.FragmentNivel1;
+import Fragment.FragmentNivel6;
+import Fragment.Gano;
 
-public class ActivityContainer extends AppCompatActivity implements Fragment.Gano.FragmentGanoListener {
+public class ActivityContainer extends AppCompatActivity implements Gano.FragmentGanoListener {
 
 
 
@@ -62,15 +63,16 @@ public class ActivityContainer extends AppCompatActivity implements Fragment.Gan
 
         array_fragments = new Fragment [6];
         array_fragments[1] = new FragmentNivel1();
+        array_fragments[2] = new FragmentNivel6();
 
 
     }
 
     @Override
     public void onInputGanoSent(Boolean input) {
-        FragmentTransaction.TRANSIT_FRAGMENT_CLOSE.
         if (input) {
-            Intent intent= new Intent(ActivityContainer.this, MainActivity.class)
+            loadFragments(array_fragments [2]);
         }
+
     }
 }
