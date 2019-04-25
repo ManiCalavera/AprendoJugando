@@ -4,25 +4,34 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-
 import com.example.aprendojugando.ActivityContainer;
 import com.example.aprendojugando.R;
 
-
-
+import java.io.Serializable;
 
 
 public class Gano extends AppCompatDialogFragment {
 
     private FragmentGanoListener listener;
 
+
+    public Gano() {
+    }
+
+    public Gano(FragmentGanoListener listener) {
+        this.listener = listener;
+    }
+
     public interface FragmentGanoListener {
-        void onInputGanoSent(Boolean input);
+        void onInputGanoSiSent();
+        void onInputGanoNoSent ();
     }
 
     Button btn_si;
@@ -38,23 +47,12 @@ public class Gano extends AppCompatDialogFragment {
         btn_no = view.findViewById(R.id.button_no);
 
 
-        loadbuttons();
+
 
         builder.setView(view);
 
-               /* .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+        loadbuttons();
 
-                    }
-                })
-                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-                */
         return builder.create();
 
     }
@@ -64,7 +62,7 @@ public class Gano extends AppCompatDialogFragment {
 
             @Override
             public void onClick(View v) {
-                listener.onInputGanoSent(true);
+                listener.onInputGanoSiSent();
                 dismiss();
             }
         });
@@ -73,26 +71,24 @@ public class Gano extends AppCompatDialogFragment {
 
             @Override
             public void onClick(View v) {
-                listener.onInputGanoSent(true);
+                listener.onInputGanoNoSent();
                 dismiss();
             }
         });
     }
+
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof FragmentGanoListener) {
-            listener = (FragmentGanoListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement FragmentAListener");
-        }
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putSerializable("escuchador", (Serializable) listener);
     }
 
     @Override
-    public void onDetach() {
-        super.onDetach();
-        listener = null;
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+
+        listener = (FragmentGanoListener) savedInstanceState.getSerializable("escuchador");
     }
 }
 

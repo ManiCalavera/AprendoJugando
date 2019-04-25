@@ -19,13 +19,16 @@ import android.widget.Toast;
 
 import com.example.aprendojugando.R;
 
-public class FragmentNivel1 extends Fragment {
+import java.io.Serializable;
+
+public class FragmentNivel1 extends Fragment implements Gano.FragmentGanoListener, Serializable{
 
     private ImageView imageView1_arbol1;
     private ImageView imageView2_espada1;
     private ImageView imageView3_uno1;
     private ImageView imageView4_oso1;
     private ImageButton btn_check;
+    private FragmenttoActiviy fragmenttoActiviy;
     final Boolean[] arreglo = {false, false, false, false};
 
 
@@ -38,7 +41,7 @@ public class FragmentNivel1 extends Fragment {
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View fragment1 =  inflater.inflate( R.layout.fragment_nivel1, container, false );
+        final View fragment1 =  inflater.inflate( R.layout.fragment_nivel1, container, false );
 
 
 
@@ -124,10 +127,10 @@ public class FragmentNivel1 extends Fragment {
             public void onClick(View v) {
 
                 if ((!arreglo[0]) && (!arreglo[1]) && (arreglo[2]) && (!arreglo[3])) {
-                    new Gano().show(getFragmentManager(), "Ganó!");
+                    new Gano(FragmentNivel1.this).show(getFragmentManager(), "Ganó!");
                 }
                 else {
-                    Toast.makeText(getContext(), "Ups! te equivocaste, inténtalo de nuevo", Toast.LENGTH_LONG).show();
+                    new Perdio ().show(getFragmentManager(), "perdío");
                 }
 
             }
@@ -140,4 +143,26 @@ public class FragmentNivel1 extends Fragment {
 
 
 
+    @Override
+    public void onInputGanoSiSent() {
+        fragmenttoActiviy.llamarNivel2();
+
+    }
+
+    @Override
+    public void onInputGanoNoSent() {
+        fragmenttoActiviy.iraHome();
+    }
+
+    public interface FragmenttoActiviy {
+        void llamarNivel2 ();
+        void iraHome ();
+
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.fragmenttoActiviy = (FragmenttoActiviy) context;
+    }
 }

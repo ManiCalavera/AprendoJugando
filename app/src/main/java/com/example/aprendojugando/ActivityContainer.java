@@ -1,5 +1,6 @@
 package com.example.aprendojugando;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,10 +8,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import Fragment.FragmentNivel1;
-import Fragment.FragmentNivel6;
-import Fragment.Gano;
+import Fragment.FragmentNivel2;
 
-public class ActivityContainer extends AppCompatActivity implements Gano.FragmentGanoListener {
+public class ActivityContainer extends AppCompatActivity implements FragmentNivel1.FragmenttoActiviy {
 
 
 
@@ -45,8 +45,7 @@ public class ActivityContainer extends AppCompatActivity implements Gano.Fragmen
 
     }
 
-   /* private void loadFragmentLetras(String modoLetras) {
-    }*/
+
 
 
 
@@ -63,16 +62,21 @@ public class ActivityContainer extends AppCompatActivity implements Gano.Fragmen
 
         array_fragments = new Fragment [6];
         array_fragments[1] = new FragmentNivel1();
-        array_fragments[2] = new FragmentNivel6();
+        array_fragments[2] = new FragmentNivel2();
 
 
     }
 
+
     @Override
-    public void onInputGanoSent(Boolean input) {
-        if (input) {
-            loadFragments(array_fragments [2]);
-        }
+    public void llamarNivel2() {
+        loadFragments(array_fragments [2]);
+    }
+
+    @Override
+    public void iraHome() {
+        Intent intent = new Intent (ActivityContainer.this, MainActivity.class);
+        startActivity(intent);
 
     }
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_gano"
+    android:id="@+id/fragment_perdio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_constraintHeight_percent="0.5"
@@ -12,7 +13,7 @@
         android:id="@+id/appCompatImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/feliz"
+        android:background="@drawable/triste"
         android:scaleType="center"
         app:layout_constraintBottom_toTopOf="@id/guidelinegano3"
         app:layout_constraintDimensionRatio="18:20"
@@ -49,49 +50,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_si"
+        android:id="@+id/perdio_si"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="30dp"
-        android:background="#E146BB1E"
+        android:background="#2E6819"
         android:text="Si"
         android:textSize="@dimen/_15sdp"
         android:textColor="@color/icons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="3:2"
-        app:layout_constraintEnd_toStartOf="@id/button_no"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/guidelinegano2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelinegano2"
-        android:layout_marginRight="30dp"
         android:layout_marginBottom="@dimen/_4sdp"
         android:layout_marginTop="@dimen/_4sdp"
         />
 
-    <Button
-        android:id="@+id/button_no"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:textSize="@dimen/_15sdp"
-        android:background="#EBD13526"
-        android:text="No"
-        android:textColor="@color/icons"
-        app:layout_constraintTop_toTopOf="@id/guidelinegano2"
-        app:layout_constraintDimensionRatio="3:2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_si"
-        android:layout_marginBottom="@dimen/_4sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        />
 
     <TextView
         android:id="@+id/textview_gano1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center|bottom"
-        android:text="¡ EXELENTE !"
+        android:text="¡TE EQUIVOCASTE!"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         android:textColor="@android:color/holo_green_dark"
@@ -99,14 +82,14 @@
         app:layout_constraintBottom_toTopOf="@id/textview_gano2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-         />
+        />
 
     <TextView
         android:id="@+id/textview_gano2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center|top"
-        android:text="¡ SIGAMOS JUGANDO !"
+        android:text="¡INTÉNTALO DE NUEVO!"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
