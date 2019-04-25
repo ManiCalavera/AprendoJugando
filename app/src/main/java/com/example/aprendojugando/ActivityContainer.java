@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import Fragment.FragmentNivel1;
 import Fragment.FragmentNivel2;
+import Fragment.FragmentNivel6;
 
 public class ActivityContainer extends AppCompatActivity implements FragmentNivel1.FragmenttoActiviy {
 
@@ -60,9 +61,10 @@ public class ActivityContainer extends AppCompatActivity implements FragmentNive
 
     private void cargararray (){
 
-        array_fragments = new Fragment [6];
+        array_fragments = new Fragment [7];
         array_fragments[1] = new FragmentNivel1();
         array_fragments[2] = new FragmentNivel2();
+        array_fragments[6] = new FragmentNivel6();
 
 
     }

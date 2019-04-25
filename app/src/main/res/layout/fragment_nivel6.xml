@@ -1,18 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo1"
 
-    <TextView
-        android:id="@+id/textView"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/lvl6_img1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line12"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line11"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ala"
+        />
+    <ImageView
+        android:id="@+id/lvl6_img2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line13"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line12"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/oreja"
+        />
+    <ImageView
+        android:id="@+id/lvl6_img3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line14"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line13"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ojo"
+        />
+    <ImageView
+        android:id="@+id/lvl6_img4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line15"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line14"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/anillo"
+        />
+    <ImageView
+        android:id="@+id/lvl6_img5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line12"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line11"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_img1"
+        android:src="@drawable/oveja"
+        />
+    <ImageView
+        android:id="@+id/lvl6_img6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line13"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line12"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_img2"
+        android:src="@drawable/arania"
+        />
+    <ImageView
+        android:id="@+id/lvl6_img7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line14"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line13"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_img3"
+        android:src="@drawable/olla"
+        />
+    <ImageView
+        android:id="@+id/lvl6_img8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:4"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line15"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_line14"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_img4"
+        android:src="@drawable/aro"
+        />
+
+
+    <ImageButton
+        android:id="@+id/lvl6_home"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/casa"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line13"
+        app:layout_constraintLeft_toLeftOf="@id/lvl6_home"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_img6"
+        app:layout_constraintBottom_toTopOf="@id/lvl6_line1"
+        app:layout_constraintDimensionRatio="2:2"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        app:layout_constraintHeight_max="80dp"
+                />
+
+    <ImageButton
+        android:id="@+id/lvl6_chck"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/check"
+        app:layout_constraintRight_toRightOf="@id/lvl6_home"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line13"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_img7"
+        app:layout_constraintBottom_toTopOf="@id/lvl6_line1"
+        app:layout_constraintDimensionRatio="2:2"
+        app:layout_constraintHeight_max="80dp"
+        android:layout_marginLeft="2dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        a
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="429dp"
-        android:text="Holis"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.125"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.250"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.375"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.625"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.750"
+        />
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_line16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.875"
+        />
+
+
+
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line10"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line11"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line10">
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line12"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line11">
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line13"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line12">
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line14"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line13">
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line15"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line14">
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_line16"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line15">
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/troquelado"
+        android:id="@+id/lvl6_linear8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_line16">
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
 </android.support.constraint.ConstraintLayout>
