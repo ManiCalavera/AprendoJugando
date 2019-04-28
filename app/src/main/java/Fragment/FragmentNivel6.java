@@ -1,7 +1,6 @@
 package Fragment;
 
 import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.DragEvent;
@@ -9,79 +8,104 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.view.View.DragShadowBuilder;
-import android.content.ClipData;
 import android.view.View.OnDragListener;
 import android.view.View.OnTouchListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.aprendojugando.R;
 
 public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragListener{
 
-    public ImageView iv1;
-    public ImageView iv2;
-    public ImageView iv3;
-    public ImageView iv4;
-    public ImageView iv5;
-    public ImageView iv6;
-    public ImageView iv7;
-    public ImageView iv8;
 
-    ImageButton btn_check;
-
-    private LinearLayout [] linears= new LinearLayout[9];
-    private ImageView [] ivs= new ImageView[9];
-
+    public Button btn_check;
+    private ImageView tv1;
+    private ImageView tv2;
+    private ImageView tv3;
+    private ImageView tv4;
+    private ImageView tv5;
+    private ImageView tv6;
+    private ImageView tv7;
+    private ImageView tv8;
+    private LinearLayout linear2;
+    private LinearLayout linear3;
+    private LinearLayout linear4;
+    private LinearLayout linear5;
+    private LinearLayout linear6;
+    private LinearLayout linear7;
+    private LinearLayout linear8;
+    private LinearLayout linear9;
+    private LinearLayout [] linears= new LinearLayout[4];
+    private int[] tvs= new int [4];
 
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View fragment6 = inflater.inflate(R.layout.fragment_nivel6, container, false);
-        ivs [1] = fragment6.findViewById(R.id.lvl6_img1);
-        ivs [2] = fragment6.findViewById(R.id.lvl6_img2);
-        ivs [3] = fragment6.findViewById(R.id.lvl6_img3);
-        ivs [4] = fragment6.findViewById(R.id.lvl6_img4);
-        ivs [5] = fragment6.findViewById(R.id.lvl6_img5);
-        ivs [6]= fragment6.findViewById(R.id.lvl6_img6);
-        ivs [7] = fragment6.findViewById(R.id.lvl6_img7);
-        ivs [8] = fragment6.findViewById(R.id.lvl6_img8);
-
-        btn_check = fragment6.findViewById(R.id.lvl6_chck);
-
-        /*ivs [1] = iv1.getId();
-        ivs [2] = iv2.getId();
-        ivs [3] = iv3.getId();
-        ivs [4] = iv4.getId();
-        ivs [5] = iv5.getId();
-        ivs [6] = iv6.getId();
-        ivs [7] = iv7.getId();
-        ivs [8] = iv8.getId();*/
-
-        linears [1] = fragment6.findViewById(R.id.lvl6_linear1);
-        linears [2]= fragment6.findViewById(R.id.lvl6_linear2);
-        linears [3] = fragment6.findViewById(R.id.lvl6_linear3);
-        linears [4] = fragment6.findViewById(R.id.lvl6_linear4);
-        linears [5] = fragment6.findViewById(R.id.lvl6_linear5);
-        linears [6] = fragment6.findViewById(R.id.lvl6_linear6);
-        linears [7] = fragment6.findViewById(R.id.lvl6_linear7);
-        linears [8] = fragment6.findViewById(R.id.lvl6_linear8);
+        linear2 = fragment6.findViewById(R.id.linear2);
+        linear2.setOnDragListener(this);
+        linear3 = fragment6.findViewById(R.id.linear3);
+        linear3.setOnDragListener(this);
+        linear4 = fragment6.findViewById(R.id.linear4);
+        linear4.setOnDragListener(this);
+        linear5 = fragment6.findViewById(R.id.linear5);
+        linear5.setOnDragListener(this);
+        linear6 = fragment6.findViewById(R.id.linear6);
+        linear6.setOnDragListener(this);
+        linear7 = fragment6.findViewById(R.id.linear7);
+        linear7.setOnDragListener(this);
+        linear8 = fragment6.findViewById(R.id.linear8);
+        linear8.setOnDragListener(this);
+        linear9 = fragment6.findViewById(R.id.linear9);
+        linear9.setOnDragListener(this);
 
 
 
 
+        tvs [0]= (R.id.tv5);
+        tvs [1]= (R.id.tv6);
+        tvs [2]= (R.id.tv7);
+        tvs [3]= (R.id.tv8);
 
-        for (int i= 1; i<= 8; i++){
-            linears [1].setOnDragListener(this) ;
-        }
+        linears [0]= (LinearLayout) linear2;
+        linears [1]= (LinearLayout) linear3;
+        linears [2]= (LinearLayout) linear4;
+        linears [3]= (LinearLayout) linear5;
 
-        for (int i= 1; i<= 8; i++){
-            ivs [i].setOnTouchListener(this) ;
-        }
+
+
+        btn_check=fragment6.findViewById(R.id.btn_check);
+        btn_check.setOnTouchListener(this);
+
+        tv1= fragment6.findViewById(R.id.tv1);
+        tv1.setOnTouchListener(this);
+        tv2= fragment6.findViewById(R.id.tv2);
+        tv2.setOnTouchListener(this);
+        tv3= fragment6.findViewById(R.id.tv3);
+        tv3.setOnTouchListener(this);
+        tv4= fragment6.findViewById(R.id.tv4);
+        tv4.setOnTouchListener(this);
+        tv5= fragment6.findViewById(R.id.tv5);
+        tv5.setOnTouchListener(this);
+        tv6= fragment6.findViewById(R.id.tv6);
+        tv6.setOnTouchListener(this);
+        tv7= fragment6.findViewById(R.id.tv7);
+        tv7.setOnTouchListener(this);
+        tv8= fragment6.findViewById(R.id.tv8);
+        tv8.setOnTouchListener(this);
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +122,7 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
                     view.startDrag(null, shadowBuilder, view, 0);
                     view.setVisibility(View.INVISIBLE);
                 }
-                /*else {
+                else {
                     if ((linear9.getChildCount()==0)|(linear2.getChildCount()==0)|(linear3.getChildCount()==0)|(linear4.getChildCount()==0)|(linear5.getChildCount()==0)|(linear6.getChildCount()==0)|(linear7.getChildCount()==0)|(linear8.getChildCount()==0)) {
                         Toast.makeText(getContext(), "UPs! te faltó ubicar todas las imágenes!", Toast.LENGTH_SHORT).show();
                         //btn_check.setText(R.string.txt_view_estado);
@@ -122,40 +146,39 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
                                 gano= false;
                                 u++;
                             }
-                        }*//*
+                        }*/
                         if (gano){
-                            Toast.makeText(MainActivity.this,"Ganaste!!!!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(),"Ganaste!!!!",Toast.LENGTH_SHORT).show();
                         }
                     }
-                }*/
+                }
                 break;
         }
         return true;
     }
     public boolean onDrag(View layoutview, DragEvent event) {
-
         View view = (View) event.getLocalState();
         LinearLayout container = (LinearLayout) layoutview;
         switch (event.getAction()) {
 
-            case  DragEvent.ACTION_DRAG_ENTERED:
-                Toast.makeText(getContext(), "drag entered", Toast.LENGTH_SHORT).show();
+
             case DragEvent.ACTION_DROP:
 
-                //if (container.getChildCount() == 0) {
-                    Toast.makeText(getContext(),"drag drop",Toast.LENGTH_SHORT).show();
-                    ViewGroup owner = (ViewGroup) view.getParent();
+                if (container.getChildCount() == 0) {
 
+                    ViewGroup owner = (ViewGroup) view.getParent();
                     owner.removeView(view);
 
                     container.addView(view);
                     view.setVisibility(View.VISIBLE);
-               //}
+
+
+                }
                 break;
 
-            /*case DragEvent.ACTION_DRAG_ENDED:
+            case DragEvent.ACTION_DRAG_ENDED:
                 view.setVisibility(View.VISIBLE);
-                break;*/
+                break;
         }
         return true;
     }
