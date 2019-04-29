@@ -1,14 +1,15 @@
 package Fragment;
 
 import android.annotation.SuppressLint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,7 +24,11 @@ import com.example.aprendojugando.R;
 public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragListener{
 
 
-    public Button btn_check;
+    private ImageButton btn_check;
+    private ImageButton btn_home;
+    private ImageButton  btn_help;
+    private TextView txt2;
+    private TextView txt4;
     private ImageView tv1;
     private ImageView tv2;
     private ImageView tv3;
@@ -39,66 +44,73 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
     private LinearLayout linear6;
     private LinearLayout linear7;
     private LinearLayout linear8;
-    private LinearLayout linear9;
-    private LinearLayout [] linears= new LinearLayout[4];
-    private int[] tvs= new int [4];
+    private LinearLayout linear1;
+    private LinearLayout [] linears= new LinearLayout[5];
+    private ImageView [] tvs= new ImageView[9];
 
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View fragment6 = inflater.inflate(R.layout.fragment_nivel6, container, false);
-        linear2 = fragment6.findViewById(R.id.linear2);
+        Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.kk26toyblocks123);
+        txt2 = fragment6.findViewById(R.id.lvl6_txt2);
+        txt4 = fragment6.findViewById (R.id.lvl6_txt4);
+        txt2.setTypeface(typeface);
+        txt4.setTypeface(typeface);
+
+
+        linear2 = fragment6.findViewById(R.id.lvl6_linear2);
         linear2.setOnDragListener(this);
-        linear3 = fragment6.findViewById(R.id.linear3);
+        linear3 = fragment6.findViewById(R.id.lvl6_linear3);
         linear3.setOnDragListener(this);
-        linear4 = fragment6.findViewById(R.id.linear4);
+        linear4 = fragment6.findViewById(R.id.lvl6_linear4);
         linear4.setOnDragListener(this);
-        linear5 = fragment6.findViewById(R.id.linear5);
+        linear5 = fragment6.findViewById(R.id.lvl6_linear5);
         linear5.setOnDragListener(this);
-        linear6 = fragment6.findViewById(R.id.linear6);
+        linear6 = fragment6.findViewById(R.id.lvl6_linear6);
         linear6.setOnDragListener(this);
-        linear7 = fragment6.findViewById(R.id.linear7);
+        linear7 = fragment6.findViewById(R.id.lvl6_linear7);
         linear7.setOnDragListener(this);
-        linear8 = fragment6.findViewById(R.id.linear8);
+        linear8 = fragment6.findViewById(R.id.lvl6_linear8);
         linear8.setOnDragListener(this);
-        linear9 = fragment6.findViewById(R.id.linear9);
-        linear9.setOnDragListener(this);
+        linear1 = fragment6.findViewById(R.id.lvl6_linear1);
+        linear1.setOnDragListener(this);
 
 
 
 
-        tvs [0]= (R.id.tv5);
-        tvs [1]= (R.id.tv6);
-        tvs [2]= (R.id.tv7);
-        tvs [3]= (R.id.tv8);
-
-        linears [0]= (LinearLayout) linear2;
-        linears [1]= (LinearLayout) linear3;
-        linears [2]= (LinearLayout) linear4;
-        linears [3]= (LinearLayout) linear5;
 
 
+        linears [2]= (LinearLayout) linear2;
+        linears [3]= (LinearLayout) linear3;
+        linears [4]= (LinearLayout) linear4;
+        linears [1]= (LinearLayout) linear1;
 
-        btn_check=fragment6.findViewById(R.id.btn_check);
+
+        btn_help=fragment6.findViewById(R.id.lvl6_btn_help);
+        btn_check=fragment6.findViewById(R.id.lvl6_btn_check);
+        btn_home=fragment6.findViewById(R.id.lvl6_btn_home);
         btn_check.setOnTouchListener(this);
+        btn_check.setOnTouchListener(this);
+        btn_help.setOnTouchListener(this);
 
-        tv1= fragment6.findViewById(R.id.tv1);
-        tv1.setOnTouchListener(this);
-        tv2= fragment6.findViewById(R.id.tv2);
-        tv2.setOnTouchListener(this);
-        tv3= fragment6.findViewById(R.id.tv3);
-        tv3.setOnTouchListener(this);
-        tv4= fragment6.findViewById(R.id.tv4);
-        tv4.setOnTouchListener(this);
-        tv5= fragment6.findViewById(R.id.tv5);
-        tv5.setOnTouchListener(this);
-        tv6= fragment6.findViewById(R.id.tv6);
-        tv6.setOnTouchListener(this);
-        tv7= fragment6.findViewById(R.id.tv7);
-        tv7.setOnTouchListener(this);
-        tv8= fragment6.findViewById(R.id.tv8);
-        tv8.setOnTouchListener(this);
+        tvs [1] = fragment6.findViewById(R.id.tv1);
+        tvs [1].setOnTouchListener(this);
+        tvs [2]= fragment6.findViewById(R.id.tv2);
+        tvs [2].setOnTouchListener(this);
+        tvs [3]= fragment6.findViewById(R.id.tv3);
+        tvs [3].setOnTouchListener(this);
+        tvs [4]= fragment6.findViewById(R.id.tv4);
+        tvs [4].setOnTouchListener(this);
+        tvs [5]= fragment6.findViewById(R.id.tv5);
+        tvs [5].setOnTouchListener(this);
+        tvs [6]= fragment6.findViewById(R.id.tv6);
+        tvs [6].setOnTouchListener(this);
+        tvs [7]= fragment6.findViewById(R.id.tv7);
+        tvs [7].setOnTouchListener(this);
+        tvs [8]= fragment6.findViewById(R.id.tv8);
+        tvs [8].setOnTouchListener(this);
 
 
 
@@ -117,13 +129,14 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
     public boolean onTouch(View view, MotionEvent motionEvent) {
         switch (motionEvent.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                if (view.getId() != btn_check.getId()) {
+                if ( (view.getId() != btn_help.getId()) &(view.getId() != btn_check.getId()) & (view.getId() != btn_home.getId())) {
                     DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
                     view.startDrag(null, shadowBuilder, view, 0);
                     view.setVisibility(View.INVISIBLE);
                 }
                 else {
-                    if ((linear9.getChildCount()==0)|(linear2.getChildCount()==0)|(linear3.getChildCount()==0)|(linear4.getChildCount()==0)|(linear5.getChildCount()==0)|(linear6.getChildCount()==0)|(linear7.getChildCount()==0)|(linear8.getChildCount()==0)) {
+                    if (view.getId() == btn_check.getId()){
+                    if ((linear1.getChildCount()==0)|(linear2.getChildCount()==0)|(linear3.getChildCount()==0)|(linear4.getChildCount()==0)|(linear5.getChildCount()==0)|(linear6.getChildCount()==0)|(linear7.getChildCount()==0)|(linear8.getChildCount()==0)) {
                         Toast.makeText(getContext(), "UPs! te faltó ubicar todas las imágenes!", Toast.LENGTH_SHORT).show();
                         //btn_check.setText(R.string.txt_view_estado);
                     }
@@ -132,8 +145,8 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
                         //u=0;
                         boolean gano;
                         gano = true;
-                        for (Integer i = 0; i<4; i++) {
-                            if ((linears[i].getChildAt(0).getId() == tvs[0]) || (linears[i].getChildAt(0).getId() == tvs[1]) || (linears[i].getChildAt(0).getId() == tvs[2]) || (linears[i].getChildAt(0).getId() == tvs[3])) {
+                        for (Integer i = 1; i<=4; i++) {
+                            if ((linears[i].getChildAt(0).getId() == tvs[1].getId()) || (linears[i].getChildAt(0).getId() == tvs[4].getId()) || (linears[i].getChildAt(0).getId() == tvs[6].getId()) || (linears[i].getChildAt(0).getId() == tvs[8].getId())) {
                                 Toast.makeText(getContext(), "UPs! Te equivocaste! inténtalo de nuevo", Toast.LENGTH_SHORT).show();
                                 gano= false;
                                 //i = i + 1;
@@ -151,6 +164,7 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
                             Toast.makeText(getContext(),"Ganaste!!!!",Toast.LENGTH_SHORT).show();
                         }
                     }
+                }
                 }
                 break;
         }
