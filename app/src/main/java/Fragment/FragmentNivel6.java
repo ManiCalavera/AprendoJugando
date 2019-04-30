@@ -3,6 +3,7 @@ package Fragment;
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.res.ResourcesCompat;
 import android.view.DragEvent;
@@ -45,7 +46,7 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
     private LinearLayout linear7;
     private LinearLayout linear8;
     private LinearLayout linear1;
-    private LinearLayout [] linears= new LinearLayout[5];
+    private LinearLayout [] linears= new LinearLayout[9];
     private ImageView [] tvs= new ImageView[9];
 
 
@@ -81,11 +82,16 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
 
 
 
-
+        linears [1]= (LinearLayout) linear1;
         linears [2]= (LinearLayout) linear2;
         linears [3]= (LinearLayout) linear3;
         linears [4]= (LinearLayout) linear4;
-        linears [1]= (LinearLayout) linear1;
+        linears [5]= (LinearLayout) linear5;
+        linears [6]= (LinearLayout) linear6;
+        linears [7]= (LinearLayout) linear7;
+        linears [8]= (LinearLayout) linear8;
+
+
 
 
         btn_help=fragment6.findViewById(R.id.lvl6_btn_help);
@@ -185,6 +191,7 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
 
                     container.addView(view);
                     view.setVisibility(View.VISIBLE);
+
 
 
                 }

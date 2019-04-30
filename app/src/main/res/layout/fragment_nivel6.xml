@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/center"
+    android:id="@+id/lvl6_constraintmadre"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo1"
@@ -12,13 +13,13 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/lvl6_constraint0"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="@dimen/_65sdp"
-        android:layout_marginRight="@dimen/_100sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="20:22"
         android:background="#3FDA08"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintRight_toLeftOf="@id/lvl6_guideline9"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_guideline10"
+        app:layout_constraintTop_toTopOf="@id/lvl6_guideline11">
 
         <ImageButton
             android:id="@+id/lvl6_btn_check"
@@ -50,8 +51,9 @@
 
         <ImageView
             android:id="@+id/tv1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
             android:background="@drawable/ala"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline-1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline0"
@@ -59,8 +61,9 @@
 
         <ImageView
             android:id="@+id/tv2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/oreja"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline0"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline1"
@@ -68,8 +71,9 @@
 
         <ImageView
             android:id="@+id/tv3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
             android:background="@drawable/ojo"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline2"
@@ -77,8 +81,9 @@
 
         <ImageView
             android:id="@+id/tv4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
             android:background="@drawable/anillo"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline2"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline3"
@@ -86,8 +91,9 @@
 
         <ImageView
             android:id="@+id/tv5"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
             android:background="@drawable/oveja"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline-1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline0"
@@ -95,8 +101,9 @@
 
         <ImageView
             android:id="@+id/tv6"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
             android:background="@drawable/arania"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline0"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline1"
@@ -104,8 +111,9 @@
 
         <ImageView
             android:id="@+id/tv7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
             android:background="@drawable/olla"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline2"
@@ -113,8 +121,9 @@
 
         <ImageView
             android:id="@+id/tv8"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
             android:background="@drawable/aro"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline2"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline3"
@@ -181,8 +190,9 @@
             android:id="@+id/lvl6_txt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
             android:gravity="center"
-            android:text="ARRASTRA LAS IMAGENES A                                             SU CASILLA CORRESPONDIENTE"
+            android:text="ARRASTRA LAS IMAGENES A SU CASILLA CORRESPONDIENTE"
             android:textColor="#FFFFFF"
             app:fontFamily="sans-serif-light"
             app:layout_constraintBottom_toTopOf="@id/lvl6_guideline4"
@@ -195,18 +205,18 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/lvl6_constraint1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_100sdp"
-        android:layout_marginRight="@dimen/_20sdp"
-        app:layout_constraintRight_toLeftOf="@id/lvl6_constraint0"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_guideline14"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_guideline13"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_txt7"
+        app:layout_constraintBottom_toBottomOf="parent"
 
         >
 
         <LinearLayout
             android:id="@+id/lvl6_debug1"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="#B64343"
             android:orientation="horizontal"
@@ -214,21 +224,28 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+
         <LinearLayout
             android:id="@+id/lvl6_linear1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             android:visibility="visible"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@id/lvl6_debug1" />
 
 
+
+
+
         <LinearLayout
             android:id="@+id/lvl6_linear2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
+            app:layout_constraintWidth_min="10dp"
             android:background="@drawable/troqueladoconverde"
             android:orientation="horizontal"
             android:visibility="visible"
@@ -237,8 +254,10 @@
 
         <LinearLayout
             android:id="@+id/lvl6_linear3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
+            app:layout_constraintWidth_min="10dp"
             android:background="@drawable/troqueladoconverde"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -246,8 +265,10 @@
 
         <LinearLayout
             android:id="@+id/lvl6_linear4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
+            app:layout_constraintWidth_min="10dp"
             android:background="@drawable/troqueladoconverde"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -255,8 +276,9 @@
 
         <LinearLayout
             android:id="@+id/lvl6_debug2"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
+            app:layout_constraintWidth_min="10dp"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear4" />
@@ -265,18 +287,17 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/lvl6_constraint2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_100sdp"
-        android:layout_marginRight="@dimen/_20sdp"
-        app:layout_constraintRight_toLeftOf="@id/lvl6_constraint1"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/lvl6_guideline12"
+        app:layout_constraintRight_toLeftOf="@id/lvl6_guideline8"
+        app:layout_constraintTop_toBottomOf="@id/lvl6_txt6"
 
         >
 
         <LinearLayout
             android:id="@+id/lvl6_debug3"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="#B64343"
             android:orientation="horizontal"
@@ -287,8 +308,9 @@
 
         <LinearLayout
             android:id="@+id/lvl6_linear5"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
             android:orientation="horizontal"
             android:visibility="visible"
@@ -298,8 +320,9 @@
 
         <LinearLayout
             android:id="@+id/lvl6_linear6"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -307,8 +330,9 @@
 
         <LinearLayout
             android:id="@+id/lvl6_linear7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -316,8 +340,9 @@
 
         <LinearLayout
             android:id="@+id/lvl6_linear8"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -325,7 +350,7 @@
 
         <LinearLayout
             android:id="@+id/lvl6_debug4"
-            android:layout_width="50dp"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="#CF4AB8"
             android:orientation="horizontal"
@@ -342,7 +367,7 @@
         app:layout_constraintBottom_toTopOf="@id/lvl6_constraint0"
         app:layout_constraintEnd_toStartOf="@+id/lvl6_txt3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/lvl6_btn_help"
+        app:layout_constraintStart_toEndOf="@+id/lvl6_guideline8"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="#3FDA08"
         android:text="LETRA" />
@@ -403,7 +428,7 @@
         app:layout_constraintBottom_toTopOf="@id/lvl6_constraint2"
         app:layout_constraintLeft_toLeftOf="@id/lvl6_constraint2"
         app:layout_constraintRight_toRightOf="@id/lvl6_constraint2"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lvl6_guideline11"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -416,11 +441,11 @@
         android:textStyle="bold"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toTopOf="@id/lvl6_constraint1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintRight_toRightOf="@id/lvl6_constraint1"
         app:layout_constraintLeft_toLeftOf="@id/lvl6_constraint1"
-        />
+        app:layout_constraintRight_toRightOf="@id/lvl6_constraint1"
+        app:layout_constraintTop_toTopOf="@id/lvl6_guideline11"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
 
 
     <ImageButton
@@ -432,9 +457,9 @@
         android:src="@drawable/ayuda"
         app:layout_constraintBottom_toTopOf="@id/lvl6_constraint0"
         app:layout_constraintDimensionRatio="2:2"
-        app:layout_constraintEnd_toStartOf="@+id/lvl6_txt2"
+        app:layout_constraintEnd_toStartOf="@+id/lvl6_guideline15"
         app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/lvl6_guideline8"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
@@ -449,8 +474,59 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.26" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <android.support.constraint.Guideline
+    android:id="@+id/lvl6_guideline10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.37" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lvl6_guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
 
 </android.support.constraint.ConstraintLayout>
 
