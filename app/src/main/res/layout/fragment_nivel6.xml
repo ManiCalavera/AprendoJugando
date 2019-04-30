@@ -51,9 +51,9 @@
 
         <ImageView
             android:id="@+id/tv1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/ala"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline-1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline0"
@@ -61,8 +61,8 @@
 
         <ImageView
             android:id="@+id/tv2"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/oreja"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline0"
@@ -71,9 +71,9 @@
 
         <ImageView
             android:id="@+id/tv3"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/ojo"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline2"
@@ -81,9 +81,9 @@
 
         <ImageView
             android:id="@+id/tv4"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/anillo"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline2"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline3"
@@ -91,9 +91,9 @@
 
         <ImageView
             android:id="@+id/tv5"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/oveja"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline-1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline0"
@@ -101,9 +101,9 @@
 
         <ImageView
             android:id="@+id/tv6"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/arania"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline0"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline1"
@@ -111,9 +111,9 @@
 
         <ImageView
             android:id="@+id/tv7"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/olla"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline1"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline2"
@@ -121,9 +121,9 @@
 
         <ImageView
             android:id="@+id/tv8"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/aro"
             app:layout_constraintLeft_toRightOf="@id/lvl6_guideline2"
             app:layout_constraintRight_toLeftOf="@id/lvl6_guideline3"
@@ -214,19 +214,18 @@
 
         >
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_debug1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="#B64343"
-            android:orientation="horizontal"
             android:visibility="invisible"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_linear1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -240,46 +239,44 @@
 
 
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_linear2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             app:layout_constraintWidth_min="10dp"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             android:visibility="visible"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear1" />
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_linear3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             app:layout_constraintWidth_min="10dp"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lvl6_linear2" />
+            app:layout_constraintTop_toBottomOf="@id/lvl6_linear2"
+            />
 
-        <LinearLayout
+
+        <FrameLayout
             android:id="@+id/lvl6_linear4"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             app:layout_constraintWidth_min="10dp"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear3" />
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_debug2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintWidth_min="10dp"
-            android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear4" />
 
@@ -295,65 +292,59 @@
 
         >
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_debug3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="#B64343"
-            android:orientation="horizontal"
             android:visibility="invisible"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_linear5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             android:visibility="visible"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_debug3" />
 
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_linear6"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear5" />
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_linear7"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear6" />
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_linear8"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="2:2"
             android:background="@drawable/troqueladoconverde"
-            android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear7" />
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/lvl6_debug4"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="#CF4AB8"
-            android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lvl6_linear8" />
 

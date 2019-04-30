@@ -7,16 +7,18 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.res.ResourcesCompat;
 import android.view.DragEvent;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.view.View.DragShadowBuilder;
 import android.view.View.OnDragListener;
 import android.view.View.OnTouchListener;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,15 +40,15 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
     private ImageView tv6;
     private ImageView tv7;
     private ImageView tv8;
-    private LinearLayout linear2;
-    private LinearLayout linear3;
-    private LinearLayout linear4;
-    private LinearLayout linear5;
-    private LinearLayout linear6;
-    private LinearLayout linear7;
-    private LinearLayout linear8;
-    private LinearLayout linear1;
-    private LinearLayout [] linears= new LinearLayout[9];
+    private FrameLayout linear2;
+    private FrameLayout linear3;
+    private FrameLayout linear4;
+    private FrameLayout linear5;
+    private FrameLayout linear6;
+    private FrameLayout linear7;
+    private FrameLayout linear8;
+    private FrameLayout linear1;
+    private FrameLayout [] linears= new FrameLayout [9];
     private ImageView [] tvs= new ImageView[9];
 
 
@@ -82,14 +84,14 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
 
 
 
-        linears [1]= (LinearLayout) linear1;
-        linears [2]= (LinearLayout) linear2;
-        linears [3]= (LinearLayout) linear3;
-        linears [4]= (LinearLayout) linear4;
-        linears [5]= (LinearLayout) linear5;
-        linears [6]= (LinearLayout) linear6;
-        linears [7]= (LinearLayout) linear7;
-        linears [8]= (LinearLayout) linear8;
+        linears [1]=  linear1;
+        linears [2]=  linear2;
+        linears [3]=  linear3;
+        linears [4]= linear4;
+        linears [5]=  linear5;
+        linears [6]=  linear6;
+        linears [7]=  linear7;
+        linears [8]= linear8;
 
 
 
@@ -178,7 +180,7 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
     }
     public boolean onDrag(View layoutview, DragEvent event) {
         View view = (View) event.getLocalState();
-        LinearLayout container = (LinearLayout) layoutview;
+        FrameLayout container = (FrameLayout) layoutview;
         switch (event.getAction()) {
 
 
@@ -189,10 +191,13 @@ public class FragmentNivel6 extends Fragment implements OnTouchListener,OnDragLi
                     ViewGroup owner = (ViewGroup) view.getParent();
                     owner.removeView(view);
 
-                    container.addView(view);
+
+                    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                            FrameLayout.LayoutParams.MATCH_PARENT,
+                            FrameLayout.LayoutParams.MATCH_PARENT,
+                            Gravity.CENTER);
+                    container.addView(view, params);
                     view.setVisibility(View.VISIBLE);
-
-
 
                 }
                 break;
